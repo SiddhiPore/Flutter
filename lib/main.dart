@@ -48,43 +48,63 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text('Fullter Learning'),
       ),
-      body: Row(
-        children: [
+      body:
 
+      Column(
+        children: [
           Container(
+            // Container outside the Row
+            width: 100,
+            height: 150,
+            color: Colors.yellow,
+            margin: EdgeInsets.all(30),
+            child: Center(
+              child:  Padding(
+                padding: const EdgeInsets.all(20),
+                child: Text('Outside Container', style: TextStyle(color: Colors.black),),
+              ),
+            ),
+          ),
+          Row(
+            children: [
+              Container(
                 width: 80,
                 height: 100,
                 color: Colors.blueGrey,
               ),
-          Container(
-            width: 80,
-            height: 100,
-            color: Colors.orange,
+              Container(
+                width: 80,
+                height: 100,
+                color: Colors.orange,
+              ),
+              Expanded(
+                child: Container(
+                  width: 80,
+                  height: 100,
+                  color: Colors.tealAccent,
+                ),
+              ),
+              Expanded(
+                child: Container(
+                  width: 80,
+                  height: 100,
+                  color: Colors.red,
+                ),
+              ),
+              Container(
+                width: 80,
+                height: 100,
+                color: Colors.green,
+              ),
+            ],
           ),
-          Expanded(
-            child: Container(
-              width: 80,
-              height: 100,
-              color: Colors.tealAccent,
-            ),
-          ),
-          Expanded(
-            child: Container(
-              width: 80,
-              height: 100,
-              color: Colors.red,
-            ),
-          ),
-          Container(
-            width: 80,
-            height: 100,
-            color: Colors.green,
-          )
-
         ],
       )
 
-       // This trailing comma makes auto-formatting nicer for build methods.
+
+
+
+      // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
