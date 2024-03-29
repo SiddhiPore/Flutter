@@ -61,7 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Center(
               child:  Padding(
                 padding: const EdgeInsets.all(20),
-                child: Text('Outside Container', style: TextStyle(color: Colors.black),),
+                child: Text('Margin & Padding', style: TextStyle(color: Colors.black),),
               ),
             ),
           ),
